@@ -6,18 +6,21 @@ package Objetos;
  * Albert Perez
  */
 public class Espectador {
-
+	
+	//Variables
 	private String nombre;
 	private int edad;
 	private double dinero;
 	
+	//Constructor
 	public Espectador(String nombre, int edad, double dinero) 
 	{
 		this.nombre = nombre;
 		this.edad = edad;
 		this.dinero = dinero;
 	}
-
+	
+	//Getters & Setters
 	public String getNombre() 
 	{
 		return nombre;
@@ -48,4 +51,4 @@ public class Espectador {
 		this.dinero = dinero;
 	}
 	
-}
+} //Fin del codigo

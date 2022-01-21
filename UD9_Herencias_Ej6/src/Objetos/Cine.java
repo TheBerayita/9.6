@@ -7,15 +7,18 @@ package Objetos;
  */
 public class Cine {
 	
+	//Variables
 	private Pelicula pelicula;
 	private double precioEntrada;
 	
+	//Constructor
 	public Cine(Pelicula pelicula, double precioEntrada) 
 	{
 		this.pelicula = pelicula;
 		this.precioEntrada = precioEntrada;
 	}
-
+	
+	//Getters & Setters
 	public Pelicula getPelicula() {
 		return pelicula;
 	}
@@ -32,6 +35,4 @@ public class Cine {
 		this.precioEntrada = precioEntrada;
 	}
 	
-	
-
-}
+} //Fin del codigo

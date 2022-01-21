@@ -13,21 +13,22 @@ public class MainApp {
 
 	public static void main(String[] args) {
 
-		Pelicula peli = new Pelicula("The Amazin Spiderman 2", "Marc Webb", 141, 13);
-		Cine cine = new Cine(peli, 8.55);
+		Pelicula peli = new Pelicula("The Equalizer", "Ben Smith", 132, 18);
+		Cine cine = new Cine(peli, 8.50);
 		Espectador[] espectadores = new Espectador[10];
 		String[][] sala = new String[8][9];
 		
 		rellenarSala(sala);
-		rellenarEspectadores(espectadores);
+		crearEspectador(espectadores);
 		
-		sentarEspectadores(espectadores, sala, cine, peli);
+		llenarButacas(espectadores, sala, cine, peli);
 		
 		mostrarSala(sala);
 
 	}
-
-	private static void sentarEspectadores(Espectador[] espectadores, String[][] sala, Cine cine, Pelicula peli) 
+	
+	//Llenar Array de la sala
+	private static void llenarButacas(Espectador[] espectadores, String[][] sala, Cine cine, Pelicula peli) 
 	{
 
 		for (Espectador espectador : espectadores) 
@@ -36,7 +37,7 @@ public class MainApp {
 			{
 				boolean libre = false;
 				int i, j;
-				do 
+				do //Bucle para llenar la sala siempre que haya sitios disponibles
 				{
 					i = (int)(Math.random()*(sala.length));
 					j = (int)(Math.random()*(sala[0].length));
@@ -46,7 +47,7 @@ public class MainApp {
 						libre = !libre;
 					}
 				} 
-				while (!libre);
+				while (!libre); //Final del Bucle
 				
 				System.out.println("Espectador: " + espectador.getNombre() + " - " + espectador.getEdad() + " años - " + espectador.getDinero() + "€ - Silla: " + sala[i][j]);
 				sala[i][j] = "XX";
@@ -59,7 +60,8 @@ public class MainApp {
 		System.out.println();
 		
 	}
-
+	
+	
 	private static void rellenarSala(String[][] sala) 
 	{
 		int x = 8;
@@ -75,10 +77,11 @@ public class MainApp {
 		}
 		
 	}
-
-	private static void rellenarEspectadores(Espectador[] espectadores) 
+	
+	//Creacion de Espectadores
+	private static void crearEspectador(Espectador[] espectadores) 
 	{
-		String[] nombres = {"Joan", "Olga", "Eric", "Jordi", "Kevin", "Jonathan", "Robert", "Laura", "Andrea", "Enya"};
+		String[] nombres = {"Andres", "Paco", "Enric", "Oscar", "Carmen", "Matias", "Ferran", "Marta", "Andrea", "Luis"};
 		
 		for (int i = 0; i < espectadores.length; i++) 
 		{
@@ -86,7 +89,8 @@ public class MainApp {
 		}
 		
 	}
-
+	
+	//Mostrar la sala
 	private static void mostrarSala(String[][] sala) 
 	{
 		for (String[] strings : sala) 
@@ -99,4 +103,4 @@ public class MainApp {
 		}
 	}
 
-}
+} //Fin del codigo
