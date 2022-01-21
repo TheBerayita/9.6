@@ -1,5 +1,10 @@
-package Main;
-
+package Objetos;
+/*
+ * Autores: 
+ * Pau Robuste
+ * Jordi Ribellas
+ * Albert Perez
+ */
 public class Pelicula {
 	
 	private String titulo, director;

@@ -1,5 +1,13 @@
 package Main;
-
+/*
+ * Autores: 
+ * Pau Robuste
+ * Jordi Ribellas
+ * Albert Perez
+ */
+import Objetos.Cine;
+import Objetos.Espectador;
+import Objetos.Pelicula;
 
 public class MainApp {
 
